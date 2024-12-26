@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko" >
+<head>
+    <title>ui-loading</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="http://www.mins01.com/favicon.ico"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="/js/ForGoogle.js"></script>
+    <!-- google analytics -->
+    <script>if(window.ForGoogle){ ForGoogle.analytics() }else{ console.log("failure : ForGoogle.analytics()");}</script>
+    
+
+    <!-- jquery 관련 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <!-- 부트스트랩 5.3.x -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+    <!-- meta og -->
+    
+    <meta property="og:title" content="ui-loading">
+    <meta property="og:description" content="ui-loading">
+    <meta name="og:image" content="http://www.mins01.com/img/logo.gif">
+    <meta property="og:image:width" content="190">
+    <meta property="og:image:height" content="70" />
+    <meta property="og:site_name" content="ui-loading" />
+    <meta property="og:type" content="website">
+    
+    <!-- //meta og -->
+    
+    <link rel="stylesheet" href="ui-loading.css">
+    <script src="UiLoading.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => { 
+            const uiLoading = globalThis.uiLoading = new UiLoading();
+            // const uiLoading = globalThis.uiLoading = new UiLoading(document.body); //핸들러 대상을 지정
+            uiLoading.show()
+            document.querySelector('#uiLoadingConter').innerText = uiLoading.counter
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>ui-loading</h1>
+        <div>
+            body.dataset.uiLoading="on" 일 경우 로딩 레이어가 보이도록 제어한다.<br>
+            여러번 .show() 할 경우, 그 수 만큼 .hide() 를 해야 로딩 레이어가 사라진다.<br>
+            .off() 으로 강제로 로딩 레이어를 끌 수 있다.
+
+        </div>
+        <hr>
+        <div>
+            <p>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+                블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ 블라블라 브라룸나웡룀나이ㅓㅁㄴㅇ <br>
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="ui-loading-container">
+        <div id="uiLoading" class="ui-loading">
+            <div class="ui-loading-bg"></div>
+            <div class="ui-loading-body">
+                <div class="d-flex align-items-center" style="gap:0.5em">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div>Loading</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; right:20px;bottom:20px;z-index:2011" class="p-3 border border-white-1" >
+        <div class="d-flex gap-1 flex-column">
+            <div class="fs-4 text-center">show 요청수: <span id="uiLoadingConter">0</span></div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="uiLoading.show();document.querySelector('#uiLoadingConter').innerText = uiLoading.counter">show</button>
+                <button type="button" class="btn btn-primary" onclick="uiLoading.hide();document.querySelector('#uiLoadingConter').innerText = uiLoading.counter">hide</button>
+                <button type="button" class="btn btn-primary" onclick="uiLoading.off();document.querySelector('#uiLoadingConter').innerText = uiLoading.counter">off</button>
+                
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="uiLoading.off();uiLoading.handlerElement= document.querySelector('html');document.querySelector('#uiLoadingConter').innerText = uiLoading.counter">handlerElement &lt;html&gt;로 변경</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="uiLoading.off();uiLoading.handlerElement= document.querySelector('body');document.querySelector('#uiLoadingConter').innerText = uiLoading.counter">handlerElement &lt;body&gt;로 변경</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
