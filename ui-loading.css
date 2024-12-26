@@ -26,10 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: clamp(10px,5vmin,60px);
-    font-weight: 700;
-    
 }
 
 .ui-loading{
@@ -39,9 +35,3 @@
     display: block
 }
 
-/* 스피너 */
-.ui-loading-body .spinner-border{
-    --bs-spinner-border-width:clamp(2px,0.17em,20px);
-    --bs-spinner-width:1em;
-    --bs-spinner-height:1em;
-}

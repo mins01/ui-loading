@@ -48,6 +48,20 @@
         });
     </script>
     
+    <!-- 커스텀 style -->
+     <style>
+        .ui-loading-body{
+            font-size: clamp(10px,5vmin,60px);
+            font-weight: 700;   
+        }
+        /* 스피너 */
+        .ui-loading-body .spinner-border{
+            --bs-spinner-border-width:clamp(2px,0.17em,20px);
+            --bs-spinner-width:1em;
+            --bs-spinner-height:1em;
+        }
+     </style>
+    
 </head>
 <body>
     <div class="container">
